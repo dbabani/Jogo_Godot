@@ -122,9 +122,9 @@ func jump2():
 func is_falling():
 	was_falling = false
 
-
+# função para aplicar o zoom quando o player passa pela parede invisível
 func _on_limit_left_body_entered(body):
-	if body.name == "player":
+	if body.name == "player": 
 		open_count = true
 	pass # Replace with function body.
 

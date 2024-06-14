@@ -63,6 +63,10 @@ jump={
 2d_physics/layer_6="area_boss"
 2d_physics/layer_7="area_cristal"
 2d_physics/layer_8="area_mola"
+2d_physics/layer_9="master"
+2d_physics/layer_10="area_corpo_master"
+2d_physics/layer_11="area_cabeca_master"
+2d_physics/layer_12="pedra_maior"
 
 [physics]
 
