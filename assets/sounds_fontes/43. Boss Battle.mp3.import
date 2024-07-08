@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/43. Boss Battle.mp3-fb1158cbd573e271c46168ce417ceeee.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds_fontes/43. Boss Battle.mp3"
+dest_files=[ "res://.import/43. Boss Battle.mp3-fb1158cbd573e271c46168ce417ceeee.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

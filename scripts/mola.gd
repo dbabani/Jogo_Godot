@@ -8,3 +8,4 @@ func _ready():
 func _on_mola_area_entered(area):
 	area.get_parent().jump(2000)
 	$anim.play("mola")
+	Sounds.play_mola()

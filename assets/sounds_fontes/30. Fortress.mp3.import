@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/30. Fortress.mp3-06109bb033c181204bc5cd86081aef98.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds_fontes/30. Fortress.mp3"
+dest_files=[ "res://.import/30. Fortress.mp3-06109bb033c181204bc5cd86081aef98.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

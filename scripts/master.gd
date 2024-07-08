@@ -47,6 +47,7 @@ func _process(delta):
 		$anim.play("die")
 		master_ativo = false
 		$"../player".stage_clear = true
+		Sounds.play_master_defeat()
 	
 	#movimentação do boss
 	velocidade = move_and_slide(velocidade,Vector2.UP,true)
@@ -63,7 +64,7 @@ func idle(delta):
 	$anim.play("idle")
 	velocidade.x = 0
 	time_comportamento += delta
-	if time_comportamento > 5:
+	if time_comportamento > 1:
 		time_comportamento = 0
 		if estado == 1:
 			comportamento = 1
@@ -148,7 +149,7 @@ func _on_area_cabeca_master_area_entered(area):
 func hitted():
 	hit = true
 	vidas -= 1
-	Sounds.play_impact()
+	Sounds.play_impact_master()
 
 func end_hit():
 	hit = false
@@ -165,6 +166,8 @@ func _on_area_corpo_master_body_entered(body):
 
 func _on_notifier_screen_entered():
 	if !master_ativo:
+		Sounds.play_master()
+		$"../parede_esquerda/shape".set_deferred("disabled", false)
 		for i in vidas:
 			var icone1 = PRE_ICONE_FUNDO.instance()
 			var icone2 = PRE_ICONE_FRENTE.instance()

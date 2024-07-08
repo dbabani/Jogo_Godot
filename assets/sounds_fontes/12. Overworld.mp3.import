@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/12. Overworld.mp3-10a05f658c4c2cfbd74beda1e9560d23.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds_fontes/12. Overworld.mp3"
+dest_files=[ "res://.import/12. Overworld.mp3-10a05f658c4c2cfbd74beda1e9560d23.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="game de plataforma"
-run/main_scene="res://scenes/fase1.tscn"
+run/main_scene="res://scenes/tela_inicial.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -72,6 +72,7 @@ jump={
 2d_physics/layer_10="area_corpo_master"
 2d_physics/layer_11="area_cabeca_master"
 2d_physics/layer_12="pedra_maior"
+2d_physics/layer_13="parede_esquerda"
 
 [physics]
 

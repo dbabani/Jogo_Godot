@@ -6,6 +6,9 @@ func play_cristal():
 
 func play_impact():
 	$impact.play()
+	
+func play_impact_master():
+	$impact_master.play()
 
 func play_queda():
 	$queda.play()
@@ -25,3 +28,25 @@ func stop_running():
 	
 func play_background():
 	$background.play()
+	
+func play_master():
+	$background.stop()
+	$background_master.play()
+
+func play_mola():
+	$mola.play()
+
+func play_master_defeat():
+	$background_master.stop()
+	$master_defeat.play()
+
+func play_player_defeat():
+	$background.stop()
+	$background_master.stop()
+	$player_defeat.play()
+
+func play_game_over():
+	$game_over.play()
+
+func stop_game_over():
+	$game_over.stop()

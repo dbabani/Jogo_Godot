@@ -1,24 +1,31 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/sounds_fontes/get_cristal.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/sounds_fontes/smw_coin.wav" type="AudioStream" id=1]
 [ext_resource path="res://scripts/sounds.gd" type="Script" id=2]
-[ext_resource path="res://assets/sounds_fontes/impact.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds_fontes/smw_stomp.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds_fontes/fall_in_the_river.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/sounds_fontes/boss_fury.mp3" type="AudioStream" id=5]
-[ext_resource path="res://assets/sounds_fontes/jump_voice.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds_fontes/smw_jump.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/sounds_fontes/running.mp3" type="AudioStream" id=7]
-[ext_resource path="res://assets/sounds_fontes/background_sound.mp3" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds_fontes/30. Fortress.mp3" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds_fontes/smw_spring_jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds_fontes/43. Boss Battle.mp3" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds_fontes/smw_stomp_koopa_kid.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds_fontes/smw_castle_clear.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds_fontes/smw_lost_a_life.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds_fontes/smw_game_over.wav" type="AudioStream" id=14]
 
 [node name="sounds" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="cristal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -15.0
 
 [node name="impact" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -15.0
+
+[node name="impact_master" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [node name="queda" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
@@ -30,12 +37,25 @@ volume_db = -15.0
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -15.0
 
 [node name="running" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -15.0
+volume_db = -25.0
 
 [node name="background" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -15.0
+
+[node name="background_master" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="mola" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="master_defeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="player_defeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="game_over" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )

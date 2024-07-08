@@ -29,11 +29,13 @@ var jump_count = 2
 func _ready():
 	Sounds.play_background()
 	$sprite.flip_h = true
-	pass
 
 func _process(delta):
-	#if position.y > 300:
-	#	get_tree().reload_current_scene()
+	if position.y >= 900 and controle and in_game:
+		in_game = false
+		controle = false
+		die()
+	
 	#movimentação da câmera
 	$cam.limit_left = $"../pos_inicial".position.x
 	$cam.limit_right = $"../pos_final".position.x
@@ -161,7 +163,6 @@ func hitted(force):
 		Game.perderVidas()
 		if !Game.vidas > 0:
 			Game.perderCoracoes()
-			print("gameover")
 		else:
 			Game.resetarCoracoes()
 
@@ -170,3 +171,8 @@ func end_hit():
 
 func die():
 	$anim.play("die")
+	Sounds.play_player_defeat()
+
+func game_over():
+	get_tree().change_scene("res://scenes/game_over.tscn")
+	Sounds.play_game_over()

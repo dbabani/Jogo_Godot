@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/assets_menu/BtnAgain.png" type="Texture" id=1]
+[ext_resource path="res://assets/assets_menu/GameOver.png" type="Texture" id=2]
+[ext_resource path="res://scripts/game_over.gd" type="Script" id=3]
+
+[node name="game_over" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.72549 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 504, 256 )
+scale = Vector2( 4.6412, 4.69445 )
+texture = ExtResource( 2 )
+
+[node name="button_retry" type="TextureButton" parent="."]
+margin_left = 449.0
+margin_top = 378.0
+margin_right = 486.0
+margin_bottom = 397.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 1 )
+
+[connection signal="pressed" from="button_retry" to="." method="_on_button_retry_pressed"]
